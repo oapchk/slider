@@ -4,6 +4,7 @@
 
 .slider {
   background-color: red;
+  font-family: sans-serif;
 }
 
 .slider .slider__slides {
@@ -39,6 +40,12 @@
   left: 200%;
 }
 .slides .slides__box {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-boxgit;
 }
 .slides .slides__hdl {
 }
