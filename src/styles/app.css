@@ -23,7 +23,7 @@
   width: 100%;
   top: 0;
   min-height: var(--sliderHeight);
-  animation-duration: 10s;
+  /* animation-duration: 10s;*/
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
@@ -110,18 +110,21 @@
   background-color: gold;
   left: 0;
   animation-name: slide-1;
+  background-image: url("../img/slide1.jpg");
 }
 
 .slides .slides__slide:nth-child(2) {
   background-color: silver;
   left: 100%;
   animation-name: slide-2;
+  background-image: url("../img/slide2.jpg");
 }
 
 .slides .slides__slide:last-child {
   background-color: green;
   left: 200%;
   animation-name: slide-3;
+  background-image: url("../img/slide3.jpg");
 }
 
 .slides .slides__box {
