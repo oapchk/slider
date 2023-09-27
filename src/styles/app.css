@@ -2,6 +2,14 @@
   --sliderHeight: 300px;
 }
 
+@font-face {
+  font-family: 'Roboto Light Italic';
+  src: url('../fonts/roboto-lightitalic1-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 .slider {
   background-color: red;
   font-family: sans-serif;
@@ -18,15 +26,7 @@
   position: relative;
 }
 
-.slides .slides__slide {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  min-height: var(--sliderHeight);
-  /* animation-duration: 10s;*/
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
+
 
 @keyframes slide-1 {
   0% {
@@ -104,6 +104,20 @@
   100% {
     left: 0;
   }
+
+}
+
+.slides .slides__slide {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  min-height: var(--sliderHeight);
+  /*  animation-duration: 10s;*/
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .slides .slides__slide:first-child {
@@ -111,6 +125,7 @@
   left: 0;
   animation-name: slide-1;
   background-image: url("../img/slide1.jpg");
+
 }
 
 .slides .slides__slide:nth-child(2) {
@@ -118,6 +133,7 @@
   left: 100%;
   animation-name: slide-2;
   background-image: url("../img/slide2.jpg");
+
 }
 
 .slides .slides__slide:last-child {
@@ -125,22 +141,41 @@
   left: 200%;
   animation-name: slide-3;
   background-image: url("../img/slide3.jpg");
+
 }
 
 .slides .slides__box {
-  padding: 10px;
+  padding: 10px 154px 10px 10px;
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   bottom: 0;
   width: 100%;
-  box-sizing: border-boxgit;
+  box-sizing: border-box;
+  color: white;
 }
 
-.slides .slides__hdl {}
 
-.slides .slides__lead {}
 
-.slides .slides__link {}
+.slides .slides__hdl {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.slides .slides__lead {
+  font-family: "Roboto Light Italic", sans-serif;
+
+}
+
+.slides .slides__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
 
 .slider-nav {}
 
