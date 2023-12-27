@@ -1,5 +1,5 @@
 :root {
-  --sliderHeight: 300px;
+  --sliderHeight: 500px;
 }
 
 @font-face {
@@ -11,13 +11,16 @@
 }
 
 .slider {
-  background-color: red;
+  position: relative;
   font-family: sans-serif;
+
 }
 
-.slider .slider__slides {}
+.slider .slider__slides {
+  position: relative;
+}
 
-.slider .slider__nav {}
+
 
 .slides {
   overflow: hidden;
@@ -112,7 +115,7 @@
   width: 100%;
   top: 0;
   min-height: var(--sliderHeight);
-  /*  animation-duration: 10s;*/
+  animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   background-size: cover;
@@ -124,7 +127,7 @@
   background-color: gold;
   left: 0;
   animation-name: slide-1;
-  background-image: url("../img/slide1.jpg");
+  background-image: url("../img/cat1.jpg");
 
 }
 
@@ -132,7 +135,7 @@
   background-color: silver;
   left: 100%;
   animation-name: slide-2;
-  background-image: url("../img/slide2.jpg");
+  background-image: url("../img/cat2.jpg");
 
 }
 
@@ -140,7 +143,7 @@
   background-color: green;
   left: 200%;
   animation-name: slide-3;
-  background-image: url("../img/slide3.jpg");
+  background-image: url("../img/cat3.jpg");
 
 }
 
@@ -177,8 +180,43 @@
 
 }
 
-.slider-nav {}
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 10;
+}
 
-.slider-nav .slider-nav__btn {}
+.slider-nav .slider-nav__btn {
+  background: url("../img/left.svg") no-repeat;
+  background-size: contain;
+  overflow: hidden;
+  margin: 20px;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  opacity: 0.3;
+  position: absolute;
+  /* transition: all 400ms ease-in-out;*/
+}
 
-.slider-nav .slider-nav__btn.slider-nav__btn--prev {}
+.slider-nav .slider-nav__btn.slider-nav__btn--prev {
+  position: absolute;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #fff;
+  border: 2px solid #087f5b;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot--fill {
+  background-color: #087f5b;
+}
